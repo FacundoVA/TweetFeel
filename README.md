@@ -63,8 +63,11 @@ TweetFeel is a Flask web app that performs real-time sentiment analysis on tweet
 4. **Explore Visualizations:** Use interactive graphs to analyze sentiment trends and patterns.
 
 ## 🖼️ Screenshots
+![Screenshot 2023-11-22 101138](https://github.com/user-attachments/assets/f421ad8b-a134-408a-a2b6-866ee20f87da)
+![Screenshot 2023-11-22 101116](https://github.com/user-attachments/assets/01f16b8e-11dc-4be7-83b0-4eb976658317)
+![Screenshot 2023-11-22 101517](https://github.com/user-attachments/assets/4a514b6b-dc73-45ab-ad4b-bb91b3cf2715)
+![Screenshot 2023-11-22 101218](https://github.com/user-attachments/assets/ab7d3350-5513-43d7-8302-3534ac695f31)
 
-*(Add screenshots of your application here to showcase the UI and features)*
 
 ## 🤝 Contributing
 
