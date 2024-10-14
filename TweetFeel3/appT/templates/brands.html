@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TweetFeel - Brands</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0077b6;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0077b6;
+        }
+
+        .add-brand {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f2f2f2;
+        }
+
+        .add-brand h3 {
+            margin-top: 0;
+        }
+
+        .add-brand input[type="text"] {
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .add-brand button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #0077b6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .form-column {
+                display: inline-block;
+                margin-right: 10px;
+        }
+
+        /* New styles */
+
+        .form-column label,
+        .form-column input,
+        .form-column select {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .form-column label {
+            width: 100px;
+        }
+
+        .form-column input,
+        .form-column select {
+            width: 140px;
+        }
+
+        .form-column button {
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TweetFeel</h1>
+    </header>
+
+    <main>
+        <h2>Brands</h2>
+
+        <ul>
+        {% for brand in brands %}
+            <li>
+                <a href="/brands/{{ brand.id }}">
+                    {{ brand.name }}
+                </a>
+            </li>
+        {% endfor %}
+        </ul>
+
+        
+            
+            <form action="/add-brand" method="post">
+                <div class="add-brand">
+                    <h3>Add a brand</h3>
+                    <input type="text" name="brand_name" placeholder="Brand name"  multiple size="2">  
+                </div>
+                <div class="add-brand">
+                    <label for="brand_description">Descripción de la marca:</label>
+                    <textarea id="brand_description" name="brand_description" required style="height: 50px; width: 300px;"></textarea>
+                </div>
+                <button type="submit">Add brand</button>
+                
+            </form>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2023 TweetFeel</p>
+    </footer>
+</body>
+</html>
